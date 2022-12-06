@@ -12,4 +12,7 @@ with open("input") as f:
 	message = f.read()
 
 marker = find_marker(message)
-print(f'The marker index is: {marker} and the sequence is: {message[marker-14:marker]}')
+if marker:
+	print(f'The marker index is: {marker} and the sequence is: {message[marker-14:marker]}')
+else:
+	print('Marker not Found')
